@@ -205,3 +205,49 @@ console.assert(arr_3[key] === arr_1[0]);
  let obj_3 = [0, 1]; // write this line
 console.assert(obj_3[1] === obj_2[key]);
 ```
+[TOP](#reference-type-exercises)
+
+---
+
+## Object Exercises
+
+__Complete the Assertions__  
+6 [on pytut exercise 6](http://www.pythontutor.com/javascript.html#code=let%20a_1%20%3D%20%7B%7D%3B%0Alet%20a_2%20%3D%20a_1%3B%0Aconsole.assert%28a_1%20%3D%3D%3D%20a_2%29%3B%0A%0Alet%20b_1%20%3D%20%7B%7D%3B%0Alet%20b_2%20%3D%20%7B%7D%3B%0Aconsole.assert%28b_1%20!%3D%3D%20b_2%29%3B%0A%0A//%20---%0A%0Aa_1.x%20%3D%203%3B%0Aa_2.x%20%3D%203%3B%0Aconsole.assert%28a_1%20%3D%3D%3D%20a_2%29%3B%0A%0Ab_1.x%20%3D%205%3B%0Ab_2.x%20%3D%205%3B%0Aconsole.assert%28b_1%20!%3D%3D%20%20b_2%29%3B&curInstr=12&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+let a_1 = {};
+let a_2 = a_1;
+console.assert(a_1 /* === or !== ? */ a_2);
+
+let b_1 = {};
+let b_2 = {};
+console.assert(b_1 /* === or !== ? */ b_2);
+
+// ---
+
+let a_1.x = 3;
+let a_2.x = 3;
+console.assert(a_1 /* === or !== ? */ a_2);
+
+let b_1.x = 5;
+let b_2.x = 5;
+console.assert(b_1 /* === or !== ? */ b_2);
+```
+```js
+let a_1 = {};
+let a_2 = a_1;
+console.assert(a_1 === a_2);
+
+let b_1 = {};
+let b_2 = {};
+console.assert(b_1 !== b_2);
+
+// ---
+
+a_1.x = 3;
+a_2.x = 3;
+console.assert(a_1 === a_2);
+
+b_1.x = 5;
+b_2.x = 5;
+console.assert(b_1 !==  b_2);
+```
