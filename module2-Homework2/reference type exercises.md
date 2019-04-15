@@ -295,3 +295,53 @@ console.assert(b_1 /* === or !== ? */ b_2);
   b_2[key] = 5;
   console.assert(b_1 !== b_2);
 ```
+_Fill in the Blanks__  
+8 [on pytut exercise 8](http://www.pythontutor.com/javascript.html#code=let%20obj_1%20%3D%20%7Bx%3A1,y%3A3,%20z%3A5,%20a%3A7%7D%20%3B%0Alet%20obj_2%20%3D%20%7Bx%3A1,%20y%3A3,%20z%3A6,%20a%3A7%7D%3B%20//%20write%20this%20line%0Aobj_1.x%20%3D%20obj_2.x%3B//%20write%20this%20line%0Aconsole.assert%28obj_1%20!%3D%3D%20obj_2%29%3B%0Aconsole.assert%28obj_1.x%20%3D%3D%3D%20obj_2.x%29%3B%0A%0Alet%20key%20%3D%20%22y%22%3B%0Aconsole.assert%28obj_1%5Bkey%5D%20%3D%3D%3D%20obj_2%5Bkey%5D%29%3B%0A%0Aobj_1%20%3D%20%7Bx%3A1,%20y%3A3,%20z%3A5,%20a%3A%5B7,2%5D%7D%3B%20//%20write%20this%20line%0Aobj_2%20%3D%20%7Bx%3A1,%20y%3A3,%20z%3A6,%20a%3A%5B7,2%5D%7D%20%3B%20//%20write%20this%20line%0Aconsole.assert%28obj_1%5Bobj_2.y%5D%20%3D%3D%3D%20obj_2%5Bobj_1.y%5D%29%3B%0Aconsole.log%28obj_1%5Bobj_2.y%5D%29%3B%0A%20%20let%20obj_3%20%3D%20%7Bx%3A3,%20y%3A3%7D%3B%20//%20write%20this%20line%0A%20%20obj_1%20%3D%20obj_2%3B%20//%20write%20this%20line%0Aconsole.assert%28obj_1%20%3D%3D%3D%20obj_2%29%3B%0Aconsole.assert%28obj_3%20!%3D%3D%20obj_1%29%3B%0Aconsole.assert%28obj_3%20!%3D%3D%20obj_2%29%3B%0Aconsole.assert%28obj_3%5Bkey%5D%20%3D%3D%3D%20obj_1.y%29%3B%0Aconsole.log%28obj_3%5Bkey%5D%29%3B%0A%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28obj_3.x%20%3D%3D%3D%20obj_2%5Bkey%5D%29%3B&curInstr=19&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+    ; // write this line
+    ; // write this line
+console.assert(obj_1 !== obj_2);
+console.assert(obj_1.x === obj_2.x);
+
+let key = "y";
+console.assert(obj_1[key] === obj_2[key]);
+
+    ; // write this line
+    ; // write this line
+console.assert(obj_1[obj_2.y] === obj_2[obj_1.y]);
+
+    ; // write this line
+    ; // write this line
+console.assert(obj_1 === obj_2);
+console.assert(obj_3 !== obj_1);
+console.assert(obj_3 !== obj_2);
+console.assert(obj_3[key] === obj_1.y);
+
+    ; // write this line
+console.assert(obj_3.x === obj_2[key]);
+```
+```js
+let obj_1 = {x:1,y:3, z:5, a:7} ;
+let obj_2 = {x:1, y:3, z:6, a:7}; // write this line
+obj_1.x = obj_2.x;// write this line
+console.assert(obj_1 !== obj_2);
+console.assert(obj_1.x === obj_2.x);
+
+let key = "y";
+console.assert(obj_1[key] === obj_2[key]);
+
+obj_1 = {x:1, y:3, z:5, a:[7,2]}; // write this line
+obj_2 = {x:1, y:3, z:6, a:[7,2]} ; // write this line
+console.assert(obj_1[obj_2.y] === obj_2[obj_1.y]);
+console.log(obj_1[obj_2.y]);
+  let obj_3 = {x:3, y:3}; // write this line
+  obj_1 = obj_2; // write this line
+console.assert(obj_1 === obj_2);
+console.assert(obj_3 !== obj_1);
+console.assert(obj_3 !== obj_2);
+console.assert(obj_3[key] === obj_1.y);
+console.log(obj_3[key]);
+
+    ; // write this line
+console.assert(obj_3.x === obj_2[key]);
+```
