@@ -345,3 +345,34 @@ console.log(obj_3[key]);
     ; // write this line
 console.assert(obj_3.x === obj_2[key]);
 ```
+
+[TOP](#reference-type-exercises)
+
+---
+
+## Comparison Exercises
+
+__Swap 'em__  
+9 [on pytut exercise 9](http://www.pythontutor.com/javascript.html#code=const%20obj%20%3D%20%7Bprop%3A%20%22array%22%7D%3B%0Aconst%20arr%20%3D%20%5B%22object%22%5D%3B%0Alet%20_%20%3D%20null%3B%0A%0A//%20swap%20the%20values%20stored%20in%20each%20structure%0A//%20%20using%20dot%20notation%20for%20the%20object%0A//%20%20using%20direct%20access%20for%20the%20array%0A_%20%3D%20obj.prop%3B%0Aobj.prop%20%3D%20arr%3B%0A%20arr%5B0%5D%20%3D%20_%3B%0A&curInstr=6&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+const obj = {prop: "array"};
+const arr = ["object"];
+let _ = null;
+
+// swap the values stored in each structure
+//  using dot notation for the object
+//  using direct access for the array
+```
+```js
+const obj = {prop: "array"};
+const arr = ["object"];
+let _ = null;
+
+// swap the values stored in each structure
+//  using dot notation for the object
+//  using direct access for the array
+_ = obj.prop;
+obj.prop = arr;
+ arr[0] = _;
+```
+
