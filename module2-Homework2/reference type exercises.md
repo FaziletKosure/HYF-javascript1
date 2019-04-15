@@ -251,3 +251,47 @@ b_1.x = 5;
 b_2.x = 5;
 console.assert(b_1 !==  b_2);
 ```
+_Complete the Assertions__  
+7[on pytut exercise 7](http://www.pythontutor.com/javascript.html#code=%20%20let%20a_1%20%3D%20%7B%7D%3B%0A%20%20let%20a_2%20%3D%20a_1%3B%0A%20%20console.assert%28a_1%20%3D%3D%3D%20a_2%29%3B%0A%0A%20%20let%20b_1%20%3D%20%7B%7D%3B%0A%20%20let%20b_2%20%3D%20%7B%7D%3B%0A%20%20console.assert%28b_1%20!%3D%3D%20b_2%29%3B%0A%0A%20%20//%20---%0A%20%20%0A%20%20const%20key%20%3D%20%22x%22%3B%0A%0A%20%20%20a_1%5Bkey%5D%20%3D%203%3B%0A%20%20%20a_2%5Bkey%5D%20%3D%203%3B%0A%20%20console.assert%28a_1%20%3D%3D%3D%20a_2%29%3B%0A%0A%20%20b_1%5Bkey%5D%20%3D%205%3B%0A%20%20b_2%5Bkey%5D%20%3D%205%3B%0A%20%20console.assert%28b_1%20!%3D%3D%20b_2%29%3B&curInstr=13&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+let a_1 = {};
+let a_2 = a_1;
+console.assert(a_1 /* === or !== ? */ a_2);
+
+let b_1 = {};
+let b_2 = {};
+console.assert(b_1 /* === or !== ? */ b_2);
+
+// ---
+
+const key = "x";
+
+let a_1[key] = 3;
+let a_2[key] = 3;
+console.assert(a_1 /* === or !== ? */ a_2);
+
+let b_1[key] = 5;
+let b_2[key] = 5;
+console.assert(b_1 /* === or !== ? */ b_2);
+```
+```js
+ let a_1 = {};
+  let a_2 = a_1;
+  console.assert(a_1 === a_2);
+
+  let b_1 = {};
+  let b_2 = {};
+  console.assert(b_1 !== b_2);
+
+  // ---
+  
+  const key = "x";
+
+   a_1[key] = 3;
+   a_2[key] = 3;
+  console.assert(a_1 === a_2);
+
+  b_1[key] = 5;
+  b_2[key] = 5;
+  console.assert(b_1 !== b_2);
+```
