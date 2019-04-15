@@ -12,6 +12,14 @@ let arr = {};
 let _ = null;
 
 // --- swap below here ---
+
+```
+```js
+let obj = [];
+let arr = {};
+let _ = null;
+
+// --- swap below here ---
 _ = obj;
 obj = arr;
 arr = _;
