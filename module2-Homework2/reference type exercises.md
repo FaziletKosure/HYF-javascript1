@@ -397,7 +397,19 @@ let _ = null;
 const obj_key = ;
 const arr_index = ;
 ```
-10 [on pytut exercise 10](http://www.pythontutor.com/javascript.html#code=const%20obj%20%3D%20%7Bprop%3A%20%22array%22%7D%3B%0Aconst%20arr%20%3D%20%5B%22object%22%5D%3B%0Alet%20_%20%3D%20null%3B%0A%0A//%20swap%20the%20values%20stored%20in%20each%20structure%0A//%20%20using%20bracket%20notation%20for%20the%20object%0A//%20%20using%20variable%20access%20for%20the%20array%0Aconst%20obj_key%20%3D%20%3B%0Aconst%20arr_index%20%3D%20%3B&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
+10 [on pytut exercise 10](http://www.pythontutor.com/javascript.html#code=const%20obj%20%3D%20%7Bprop%3A%20%22array%22%7D%3B%0Aconst%20arr%20%3D%20%5B%22object%22%5D%3B%0Alet%20_%20%3D%20null%3B%0A%0A//%20swap%20the%20values%20stored%20in%20each%20structure%0A//%20%20using%20bracket%20notation%20for%20the%20object%0A//%20%20using%20variable%20access%20for%20the%20array%0Aconst%20obj_key%20%3D%20%22prop%22%20%3B%0Aconst%20arr_index%20%3D%20%22object%22%3B%0A%0A_%20%3D%20obj%5Bobj_key%5D%3B%0Aobj%5Bobj_key%5D%20%3D%20arr_index%3B%0Aarr%5B0%5D%20%3D%20_%3B&curInstr=8&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)  
 ```js
+const obj = {prop: "array"};
+const arr = ["object"];
+let _ = null;
 
+// swap the values stored in each structure
+//  using bracket notation for the object
+//  using variable access for the array
+const obj_key = "prop" ;
+const arr_index = "object";
+
+_ = obj[obj_key];
+obj[obj_key] = arr_index;
+arr[0] = _;
 ```
