@@ -413,3 +413,49 @@ _ = obj[obj_key];
 obj[obj_key] = arr_index;
 arr[0] = _;
 ```
+
+__Relative vs Absolute__  
+
+```js
+// array indices are relative
+const arr = ["a", "b"];
+const index = 0;
+
+const read_arr_1 = arr[index];
+arr.shift(); // removes the first item
+const read_arr_2 = arr[index];
+
+console.assert(read_arr_1 /* === or !== ? */ read_arr_2);
+
+// object keys are absolute
+const obj = {x: "a", y: "b"};
+const key = "y";
+
+const read_obj_1 = obj[key];
+delete obj.x;
+const read_obj_2 = obj[key];
+
+console.assert(read_obj_1 /* === or !== ? */ read_obj_
+```
+11 [on pytut exercise 11](http://www.pythontutor.com/javascript.html#code=//%20array%20indices%20are%20relative%0Aconst%20arr%20%3D%20%5B%22a%22,%20%22b%22%5D%3B%0Aconst%20index%20%3D%200%3B%0A%0Aconst%20read_arr_1%20%3D%20arr%5Bindex%5D%3B%0Aarr.shift%28%29%3B%20//%20removes%20the%20first%20item%0Aconst%20read_arr_2%20%3D%20arr%5Bindex%5D%3B%0A%0Aconsole.assert%28read_arr_1%20!%3D%3D%20read_arr_2%29%3B%0A%0A//%20object%20keys%20are%20absolute%0Aconst%20obj%20%3D%20%7Bx%3A%20%22a%22,%20y%3A%20%22b%22%7D%3B%0Aconst%20key%20%3D%20%22y%22%3B%0A%0Aconst%20read_obj_1%20%3D%20obj%5Bkey%5D%3B%0Adelete%20obj.x%3B%0Aconst%20read_obj_2%20%3D%20obj%5Bkey%5D%3B%0A%0Aconsole.assert%28read_obj_1%20%3D%3D%3D%20%20read_obj_2%29%3B&curInstr=12&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+// array indices are relative
+const arr = ["a", "b"];
+const index = 0;
+
+const read_arr_1 = arr[index];
+arr.shift(); // removes the first item
+const read_arr_2 = arr[index];
+
+console.assert(read_arr_1 !== read_arr_2);
+
+// object keys are absolute
+const obj = {x: "a", y: "b"};
+const key = "y";
+
+const read_obj_1 = obj[key];
+delete obj.x;
+const read_obj_2 = obj[key];
+
+console.assert(read_obj_1 ===  read_obj_2);
+```
