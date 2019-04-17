@@ -710,6 +710,22 @@ console.assert(val_2 === expected);
   // break down this expression
 }
 ```
+* My solution [on pytut 14](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%200,%201,%20-1,%20NaN,%20Infinity,%20.5,%20-0.0,%201e3,%201e-3,%20999e305,%20999e306%0A*/%0Aconst%20a%20%3D1e3%20,%20b%20%3D%201,%20c%20%3D%20.5%3B%0A%0Aconst%20expected%20%3D%20b%20%25%20c%20-%20a%20*%20c%20/%20b%3B%0A%0A//%20break%20down%20this%20expression%0Aconst%20step_1%20%3D%20a%20*%20c%3B%0Aconst%20step_2%20%3D%20step_1%20/%20b%3B%0Aconst%20step_3%20%3D%20b%20%25%20c%3B%0Aconst%20step_4%20%3D%20step_3%20-%20step_2%3B%0Aconsole.assert%28step_4%20%3D%3D%3D%20expected%29%3B&cumulative=false&curInstr=7&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+/* values to try
+  0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
+*/
+const a =1e3 , b = 1, c = .5;
+
+const expected = b % c - a * c / b;
+
+// break down this expression
+const step_1 = a * c;
+const step_2 = step_1 / b;
+const step_3 = b % c;
+const step_4 = step_3 - step_2;
+console.assert(step_4 === expected);
+```
 
 [TOP](#operator-precedence)
 
