@@ -50,7 +50,27 @@ learning objectives
   console.assert(step_3 === expected, "step_3");
 }
 ```
+* My solution [on pytut 1](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%20%22%22,%20%22%20%22,%20true,%20false,%20undefined,%20null,%200,%201,%20-1,%20NaN,%20Infinity%0A*/%0Aconst%20a%20%3D%20true%3B%0A%0Aconst%20expected%20%3D%20Number%28Boolean%28String%28a%29%29%29%3B%0A%0Aconst%20val_1%20%3D%20String%28a%29%3B%0Aconst%20step_1%20%3D%20Number%28Boolean%28val_1%29%29%3B%0Aconsole.assert%28step_1%20%3D%3D%3D%20expected,%20%22step_1%22%29%3B%0A%0Aconst%20val_2%20%3D%20Boolean%28val_1%29%3B%0Aconst%20step_2%20%3D%20Number%28val_2%29%3B%0Aconsole.assert%28step_2%20%3D%3D%3D%20expected,%20%22step_2%22%29%3B%0A%0Aconst%20val_3%20%3D%20Number%28val_2%29%3B%0Aconst%20step_3%20%3D%20val_3%3B%0Aconsole.assert%28step_3%20%3D%3D%3D%20expected,%20%22step_3%22%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+/* values to try
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = true;
 
+const expected = Number(Boolean(String(a)));
+
+const val_1 = String(a);
+const step_1 = Number(Boolean(val_1));
+console.assert(step_1 === expected, "step_1");
+
+const val_2 = Boolean(val_1);
+const step_2 = Number(val_2);
+console.assert(step_2 === expected, "step_2");
+
+const val_3 = Number(val_2);
+const step_3 = val_3;
+console.assert(step_3 === expected, "step_3");
+```
 ### 2
 
 [parsonized](https://janke-learning.github.io/parsonizer/?snippet=%28a%20%2B%20b%29%20%3D%3D%20%28a%20%3C%20c%29%0A_%20%2B%20_%0A_%20%3C%20_%0A_%20%3D%3D%20_%0A%0A%0A%0A)  
