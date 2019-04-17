@@ -339,7 +339,8 @@ const val_3 = a === typeof b ;
 const step_3 = val_3 ;
 console.assert(step_3 === expected, "step_3");
 ```
-
+---
+---
 ### types & casting 2
 
 
@@ -536,16 +537,16 @@ console.assert(step_3 === expected, "step_3");
   console.assert(step_5 === expected, "step_5"); 
 }
 ```
-* My solution [on pytut 10](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%20%22%22,%20%22%20%22,%20true,%20false,%20undefined,%20null,%200,%201,%20-1,%20NaN,%20Infinity%0A*/%0Aconst%20a%20%3D%20true%20,%20b%20%3D%20false%20%3B%0A%0Aconst%20expected%20%3D%20!!a%20%7C%7C%20!!b%3B%0Aconsole.log%28!!a%20%7C%7C%20!!b%29%3B%0Aconst%20val_1%20%3D%20a%20%7C%7C%20b%3B%0Aconst%20step_1%20%3Dval_1%20%3B%0Aconsole.assert%28step_1%20%3D%3D%3D%20expected,%20%22step_1%22%29%3B%0A%0Aconst%20val_2%20%3D%20step_1%20%7C%7C%20b%3B%0Aconst%20step_2%20%3D%20val_2%3B%0Aconsole.assert%28step_2%20%3D%3D%3D%20expected,%20%22step_2%22%29%3B%0A%0Aconst%20val_3%20%3D%20b%20%7C%7C%20val_2%20%3B%0Aconst%20step_3%20%3D%20val_3%3B%0Aconsole.assert%28step_3%20%3D%3D%3D%20expected,%20%22step_3%22%29%3B%20%0A%0Aconst%20val_4%20%3D%20step_3%20%3B%0Aconst%20step_4%20%3D%20val_4%3B%0Aconsole.assert%28step_4%20%3D%3D%3D%20expected,%20%22step_4%22%29%3B%0A%0Aconst%20val_5%20%3D%20val_4%20%3D%3D%3D%20a%20%3B%0Aconst%20step_5%20%3D%20val_5%3B%0Aconsole.assert%28step_5%20%3D%3D%3D%20expected,%20%22step_5%22%29%3B&cumulative=false&curInstr=18&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+* My solution [on pytut 10](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%20%22%22,%20%22%20%22,%20true,%20false,%20undefined,%20null,%200,%201,%20-1,%20NaN,%20Infinity%0A*/%0Aconst%20a%20%3D%201%20,%20b%20%3D%20undefined%20%3B%0A%0Aconst%20expected%20%3D%20!!a%20%7C%7C%20!!b%3B%0Aconsole.log%28!!a%20%7C%7C%20!!b%29%3B%0Aconst%20val_1%20%3D%20!!a%20%7C%7C%20b%3B%0Aconst%20step_1%20%3Dval_1%20%3B%0Aconsole.assert%28step_1%20%3D%3D%3D%20expected,%20%22step_1%22%29%3B%0A%0Aconst%20val_2%20%3D%20step_1%20%7C%7C%20b%3B%0Aconst%20step_2%20%3D%20val_2%3B%0Aconsole.assert%28step_2%20%3D%3D%3D%20expected,%20%22step_2%22%29%3B%0A%0Aconst%20val_3%20%3D%20b%20%7C%7C%20val_2%20%3B%0Aconst%20step_3%20%3D%20val_3%3B%0Aconsole.assert%28step_3%20%3D%3D%3D%20expected,%20%22step_3%22%29%3B%20%0A%0Aconst%20val_4%20%3D%20step_3%20%3B%0Aconst%20step_4%20%3D%20val_4%3B%0Aconsole.assert%28step_4%20%3D%3D%3D%20expected,%20%22step_4%22%29%3B%0A%0Aconst%20val_5%20%3D%20val_4%20%7C%7C%20a%20%3B%0Aconst%20step_5%20%3D%20val_5%3B%0Aconsole.assert%28step_5%20%3D%3D%3D%20expected,%20%22step_5%22%29%3B&cumulative=false&curInstr=18&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 /* values to try
   "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
 */
-const a = true , b = false ;
+const a = 1 , b = undefined ;
 
 const expected = !!a || !!b;
 console.log(!!a || !!b);
-const val_1 = a || b;
+const val_1 = !!a || b;
 const step_1 =val_1 ;
 console.assert(step_1 === expected, "step_1");
 
@@ -561,11 +562,12 @@ const val_4 = step_3 ;
 const step_4 = val_4;
 console.assert(step_4 === expected, "step_4");
 
-const val_5 = val_4 === a ;
+const val_5 = val_4 || a ;
 const step_5 = val_5;
 console.assert(step_5 === expected, "step_5");
 ```
-
+---
+---
 
 ### logical operators 3
 
