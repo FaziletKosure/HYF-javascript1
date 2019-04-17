@@ -198,7 +198,27 @@ console.assert(step_3 === expected, "step_3");
   console.assert(step_3 === expected, "step_3");
 }
 ```
+* My solution [on pytut 4](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%20%22%22,%20%22%20%22,%20true,%20false,%20undefined,%20null,%200,%201,%20-1,%20NaN,%20Infinity%0A*/%0Aconst%20a%20%3D%200%20,%20b%20%3D%20null%20%3B%0A%0Aconst%20expected%20%3D%20%28b%20%26%26%20typeof%20a%29%20%3D%3D%3D%20'string'%3B%0Aconsole.log%28b%20%26%26%20typeof%20a%29%3B%0Aconst%20val_1%20%3D%20typeof%20a%3B%0Aconst%20step_1%20%3D%20val_1%20%3D%3D%3D%20'string'%20%26%26%20b%3B%0Aconsole.assert%28step_1%20%3D%3D%3D%20expected,%20%22step_1%22%29%3B%0A%0Aconst%20val_2%20%3D%20b%20%26%26%20val_1%3B%0Aconst%20step_2%20%3D%20val_2%20%3D%3D%3D%20'string'%3B%0Aconsole.assert%28step_2%20%3D%3D%3D%20expected,%20%22step_2%22%29%3B%0A%0Aconst%20val_3%20%3D%20val_2%20%3D%3D%3D%20'string'%3B%0Aconst%20step_3%20%3D%20val_3%3B%0Aconsole.assert%28step_3%20%3D%3D%3D%20expected,%20%22step_3%22%29%3B&cumulative=false&curInstr=12&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+/* values to try
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = 0, b = null ;
 
+const expected = (b && typeof a) === 'string';
+
+const val_1 = typeof a;
+const step_1 = val_1 === 'string' && b;
+console.assert(step_1 === expected, "step_1");
+
+const val_2 = b && val_1;
+const step_2 = val_2 === 'string';
+console.assert(step_2 === expected, "step_2");
+
+const val_3 = val_2 === 'string';
+const step_3 = val_3;
+console.assert(step_3 === expected, "step_3");
+```
 
 ### 5
 
