@@ -829,6 +829,20 @@ console.assert(step_3 === expected);
   // break down this expression
 }
 ```
+* My solution [on pytut 17](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%20%22%22,%20%22%20%22,%20true,%20false,%20undefined,%20null,%200,%201,%20-1,%20NaN,%20Infinity%0A*/%0Aconst%20a%20%3D%20undefined%3B%0A%0Aconst%20expected%20%3D%20!!%2Ba%20%3D%3D%3D%20Boolean%28a%29%3B%0A%0A//%20break%20down%20this%20expression%0Aconst%20step_1%20%3D%20!!%2Ba%3B%0Aconst%20step_2%20%3D%20step_1%20%3D%3D%3D%20Boolean%28a%29%3B%0Aconsole.assert%28step_2%20%3D%3D%3D%20expected%29%3B&cumulative=false&curInstr=5&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+/* values to try
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = undefined;
+
+const expected = !!+a === Boolean(a);
+
+// break down this expression
+const step_1 = !!+a;
+const step_2 = step_1 === Boolean(a);
+console.assert(step_2 === expected);
+```
 
 
 [TOP](#operator-precedence)
