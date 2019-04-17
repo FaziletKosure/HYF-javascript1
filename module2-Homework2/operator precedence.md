@@ -795,6 +795,22 @@ console.assert(step_3 === expected);
   // break down this expression
 }
 ```
+* My solution [on pytut 16](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%200,%201,%20-1,%20NaN,%20Infinity,%20.5,%20-0.0,%201e3,%201e-3,%20999e305,%20999e306%0A%20%20%22%22,%20%22%20%22,%20true,%20false,%20undefined,%20null,%200,%201,%20-1,%20NaN,%20Infinity%0A*/%0Aconst%20a%20%3D%201%3B%0A%0Aconst%20expected%20%3D%20typeof%20a%20%3D%3D%3D%20'number'%20%2B%20a%3B%0A%0A//%20break%20down%20this%20expression%0Aconst%20step_1%20%3D%20'number'%20%2B%20a%3B%0Aconst%20step_2%20%3D%20typeof%20a%3B%0Aconst%20step_3%20%3D%20step_2%20%3D%3D%3D%20step_1%3B%0Aconsole.assert%28step_3%20%3D%3D%3D%20expected%29%3B&cumulative=false&curInstr=6&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+/* values to try
+  0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = 1;
+
+const expected = typeof a === 'number' + a;
+
+// break down this expression
+const step_1 = 'number' + a;
+const step_2 = typeof a;
+const step_3 = step_2 === step_1;
+console.assert(step_3 === expected);
+```
 
 ### all primitive operators 3
 
