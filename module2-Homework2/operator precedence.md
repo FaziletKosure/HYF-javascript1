@@ -586,6 +586,22 @@ console.assert(step_5 === expected, "step_5");
   // break down this expression
 }
 ```
+* My solution [on pytut 11](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%20%22%22,%20%22%20%22,%20true,%20false,%20undefined,%20null,%200,%201,%20-1,%20NaN,%20Infinity%0A*/%0Aconst%20a%20%3D%200,%20b%20%3D%20undefined%20,%20c%20%3D%20null%20%3B%0A%0Aconst%20expected%20%3D%20a%20%7C%7C%20b%20%26%26%20c%20%7C%7C%20a%3B%0Aconsole.log%28%20a%20%7C%7C%20b%20%26%26%20c%20%7C%7C%20a%29%3B%0A%0A//%20break%20down%20this%20expression%0Aconst%20val_1%20%3D%20b%20%26%26%20c%3B%0Aconst%20val_2%20%3D%20a%20%7C%7C%20val_1%3B%0Aconst%20val_3%20%3D%20val_2%20%7C%7C%20a%3B%0Aconsole.assert%28val_3%20%3D%3D%3D%20expected%29%3B&cumulative=false&curInstr=7&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+/* values to try
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = 0, b = undefined , c = null ;
+
+const expected = a || b && c || a;
+console.log( a || b && c || a);
+
+// break down this expression
+const val_1 = b && c;
+const val_2 = a || val_1;
+const val_3 = val_2 || a;
+console.assert(val_3 === expected);
+```
 [ast explorer](https://astexplorer.net/#/gist/bc0bac0e8559bf97071c9129a05a28f9/e5fcaa5df8317fb1a45ba1a7866733d96768c463)
 
 
