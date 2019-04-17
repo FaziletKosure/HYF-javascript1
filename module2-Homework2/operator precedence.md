@@ -755,6 +755,27 @@ console.assert(step_4 === expected);
   // break down this expression
 }
 ```
+* My solution [on pytut 15](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%200,%201,%20-1,%20NaN,%20Infinity,%20.5,%20-0.0,%201e3,%201e-3,%20999e305,%20999e306%0A%20%200,%203%0A%20%201,%203%0A%20%202,%203%0A%20%203,%203%0A%20%204,%203%0A*/%0Aconst%20a%20%3D%20Infinity%20,%20b%20%3D%20NaN%20%3B%0A%0Aconst%20expected%20%3D%20a%20%25%20b%20%7C%7C%20!!a%3B%0A%0A//%20break%20down%20this%20expression%0Aconst%20step_1%20%3D%20!!a%3B%0Aconst%20step_2%20%3D%20a%20%25%20b%3B%0Aconst%20step_3%20%3D%20step_2%20%7C%7C%20step_1%3B%0Aconsole.assert%28step_3%20%3D%3D%3D%20expected%29%3B&cumulative=false&curInstr=5&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+
+ ```js
+ /* values to try
+  0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
+  0, 3
+  1, 3
+  2, 3
+  3, 3
+  4, 3
+*/
+const a = Infinity , b = NaN ;
+
+const expected = a % b || !!a;
+
+// break down this expression
+const step_1 = !!a;
+const step_2 = a % b;
+const step_3 = step_2 || step_1;
+console.assert(step_3 === expected);
+ ```
 
 ### all primitive operators 2
 
