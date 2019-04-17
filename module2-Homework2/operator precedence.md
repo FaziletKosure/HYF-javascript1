@@ -420,26 +420,30 @@ console.assert(step_3 === expected, "step_3");
   console.assert(step_4 === expected, "step_4");
 }
 ```
-* Solution [on pytut 7](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%20%22%22,%20%22%20%22,%20true,%20false,%20undefined,%20null,%200,%201,%20-1,%20NaN,%20Infinity%0A*/%0Aconst%20a%20%3D%20true,%20b%20%3D%20NaN%20%3B%0A%0Aconst%20expected%20%3D%20Boolean%28a%29%20!%3D%3D%20Boolean%28b%29%3B%0Aconsole.log%28Boolean%28a%29%20!%3D%3D%20Boolean%28b%29%29%3B%0Aconst%20val_1%20%3D%20a%20!%3D%3D%20b%20%3B%0Aconst%20step_1%20%3D%20val_1%3B%0Aconsole.assert%28step_1%20%3D%3D%3D%20expected,%20%22step_1%22%29%3B%0A%0Aconst%20val_2%20%3D%20step_1%20%3B%0Aconst%20step_2%20%3D%20val_2%20%3B%0Aconsole.assert%28step_2%20%3D%3D%3D%20expected,%20%22step_2%22%29%3B%0A%0Aconst%20val_3%20%3D%20val_2%20%3D%3D%3D%20val_1%20%3B%0Aconst%20step_3%20%3D%20val_3%3B%0Aconsole.assert%28step_3%20%3D%3D%3D%20expected,%20%22step_3%22%29%3B&cumulative=false&curInstr=12&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+* My Solution [on pytut 8](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%20%22%22,%20%22%20%22,%20true,%20false,%20undefined,%20null,%200,%201,%20-1,%20NaN,%20Infinity%0A*/%0Aconst%20a%20%3D%20true%20,%20b%20%3D%20false%20%3B%0A%0Aconst%20expected%20%3D%20Boolean%28b%29%20%3D%3D%3D%20Boolean%28Number%28a%29%29%3B%0Aconsole.log%28Boolean%28Number%28a%29%29%29%3B%0Aconst%20val_1%20%3D%20a%20%3D%3D%3D%20b%20%3B%0Aconst%20step_1%20%3D%20val_1%20%3B%0Aconsole.assert%28step_1%20%3D%3D%3D%20expected,%20%22step_1%22%29%3B%0A%0Aconst%20val_2%20%3D%20val_1%20!%3D%3D%20step_1%20%3B%0Aconst%20step_2%20%3D%20val_2%20%3B%0Aconsole.assert%28step_2%20%3D%3D%3D%20expected,%20%22step_2%22%29%3B%0A%0Aconst%20val_3%20%3D%20step_2%20%3B%0Aconst%20step_3%20%3D%20val_3%20%3B%0Aconsole.assert%28step_3%20%3D%3D%3D%20expected,%20%22step_3%22%29%3B%0A%0Aconst%20val_4%20%3D%20a%3D%3D%3D%20val_1%20%3B%0Aconst%20step_4%20%3D%20val_4%3B%0Aconsole.assert%28step_4%20%3D%3D%3D%20expected,%20%22step_4%22%29%3B&cumulative=false&curInstr=15&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 /* values to try
   "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
 */
-const a = true, b = NaN ;
+const a = true , b = false ;
 
-const expected = Boolean(a) !== Boolean(b);
-console.log(Boolean(a) !== Boolean(b));
-const val_1 = a !== b ;
-const step_1 = val_1;
+const expected = Boolean(b) === Boolean(Number(a));
+console.log(Boolean(Number(a)));
+const val_1 = a === b ;
+const step_1 = val_1 ;
 console.assert(step_1 === expected, "step_1");
 
-const val_2 = step_1 ;
+const val_2 = val_1 !== step_1 ;
 const step_2 = val_2 ;
 console.assert(step_2 === expected, "step_2");
 
-const val_3 = val_2 === val_1 ;
-const step_3 = val_3;
+const val_3 = step_2 ;
+const step_3 = val_3 ;
 console.assert(step_3 === expected, "step_3");
+
+const val_4 = a=== val_1 ;
+const step_4 = val_4;
+console.assert(step_4 === expected, "step_4");
 ```
 
 [TOP](#operator-precedence)
