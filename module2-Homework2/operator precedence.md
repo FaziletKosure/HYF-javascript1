@@ -251,6 +251,31 @@ console.assert(step_3 === expected, "step_3");
   console.assert(step_4 === expected, "step_4");
 }
 ```
+* My solution [on pytut 5](http://www.pythontutor.com/live.html#code=/*%20values%20to%20try%0A%20%20%22%22,%20%22%20%22,%20true,%20false,%20undefined,%20null,%200,%201,%20-1,%20NaN,%20Infinity%0A*/%0Aconst%20a%20%3D1%20,%20b%20%3D%20%22-1%22,%20c%20%3D%200%3B%0A%0Aconst%20expected%20%3D%20%28%20a%20%3E%20Number%28b%29%20%29%20%7C%7C%20String%28c%29%3B%0A%0Aconst%20val_1%20%3D%20Number%28b%29%3B%0Aconst%20step_1%20%3D%20%28%20a%20%3E%20val_1%20%29%20%7C%7C%20String%28c%29%3B%0Aconsole.assert%28step_1%20%3D%3D%3D%20expected,%20%22step_1%22%29%3B%0A%0Aconst%20val_2%20%3D%20a%20%3E%20val_1%3B%0Aconst%20step_2%20%3D%20%28%20val_2%20%29%20%7C%7C%20String%28c%29%3B%0Aconsole.assert%28step_2%20%3D%3D%3D%20expected,%20%22step_2%22%29%3B%0A%0Aconst%20val_3%20%3D%20String%28c%29%3B%0Aconst%20step_3%20%3D%20val_2%20%7C%7C%20val_3%3B%0Aconsole.assert%28step_3%20%3D%3D%3D%20expected,%20%22step_3%22%29%3B%0A%0Aconst%20val_4%20%3D%20val_2%20%7C%7C%20val_3%3B%0Aconst%20step_4%20%3D%20val_4%3B%0Aconsole.assert%28step_4%20%3D%3D%3D%20expected,%20%22step_4%22%29%3B&cumulative=false&curInstr=14&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+```js
+/* values to try
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a =1 , b = "-1", c = 0;
+
+const expected = ( a > Number(b) ) || String(c);
+
+const val_1 = Number(b);
+const step_1 = ( a > val_1 ) || String(c);
+console.assert(step_1 === expected, "step_1");
+
+const val_2 = a > val_1;
+const step_2 = ( val_2 ) || String(c);
+console.assert(step_2 === expected, "step_2");
+
+const val_3 = String(c);
+const step_3 = val_2 || val_3;
+console.assert(step_3 === expected, "step_3");
+
+const val_4 = val_2 || val_3;
+const step_4 = val_4;
+console.assert(step_4 === expected, "step_4");
+```
 [short-circuiting - an advanced gotcha](https://codeburst.io/javascript-what-is-short-circuit-evaluation-ff22b2f5608c)
 
 
