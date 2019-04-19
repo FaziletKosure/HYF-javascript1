@@ -188,6 +188,7 @@ console.assert(obj_3[1] === obj_2[key]);
 let arr_1 = [1] ; // write this line
 let arr_2 = arr_1  ; // write this line
 
+console.assert(arr_1 !== arr_2);
 console.assert(arr_1[1] === arr_2[1]);
 
 let key = 0;
