@@ -250,7 +250,7 @@ console.assert(array !== by_copy);
 }
 ```
 * # My solution copy an object
-[on pytut](http://www.pythontutor.com/live.html#code=function%20copy_object%28obj%29%20%7B%0A%20var%20copy_object_strified%20%3D%20JSON.stringify%28obj%29%3B%0A%20%20%20%20var%20copy%20%3D%20JSON.parse%28copy_object_strified%29%3B//%20write%20this%20using%20JSON.stringify%20%26%20.parse%0A%20%20console.log%28copy%29%3B%0A%20%20console.log%28copy_object_strified%29%3B%0A%7D%0A%0Aconst%20object%20%3D%20%7Ba%3A%201,%20b%3A%202%7D%3B%0Aconst%20by_copy%20%3D%20copy_object%28object%29%3B%0A%0A//console.assert%28object.a%20%3D%3D%3D%20by_copy.a%29%3B%0A//console.assert%28object%5B'b'%5D%20%3D%3D%3D%20by_copy%5B'b'%5D%29%3B%0Aconsole.assert%28object%20!%3D%3D%20by_copy%29%3B&cumulative=false&curInstr=8&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=function%20copy_object%28obj%29%20%7B%0A%20var%20copy_object_strified%20%3D%20JSON.stringify%28obj%29%3B%0A%20%20%20%20var%20copy%20%3D%20JSON.parse%28copy_object_strified%29%3B//%20write%20this%20using%20JSON.stringify%20%26%20.parse%0A%20%20console.log%28copy%29%3B%0A%20%20console.log%28copy_object_strified%29%3B%0A%20%20return%20copy%0A%7D%0A%0Aconst%20object%20%3D%20%7Ba%3A%201,%20b%3A%202%7D%3B%0Aconst%20by_copy%20%3D%20copy_object%28object%29%3B%0A%0Aconsole.assert%28object.a%20%3D%3D%3D%20by_copy.a%29%3B%0Aconsole.assert%28object%5B'b'%5D%20%3D%3D%3D%20by_copy%5B'b'%5D%29%3B%0Aconsole.assert%28object%20!%3D%3D%20by_copy%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
 {
   function copy_object(obj) {
@@ -258,13 +258,14 @@ console.assert(array !== by_copy);
     var copy = JSON.parse(copy_object_strified);// write this using JSON.stringify & .parse
   console.log(copy);
   console.log(copy_object_strified);
+  return copy
 }
 
 const object = {a: 1, b: 2};
 const by_copy = copy_object(object);
 
-//console.assert(object.a === by_copy.a);
-//console.assert(object['b'] === by_copy['b']);
+console.assert(object.a === by_copy.a);
+console.assert(object['b'] === by_copy['b']);
 console.assert(object !== by_copy);
 }
 ```
