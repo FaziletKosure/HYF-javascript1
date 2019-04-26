@@ -191,24 +191,23 @@ not the best choice, it can be much more difficult to think about and debug.
 }
 ```
 * # My solution copy an array
-[on pytut](http://www.pythontutor.com/live.html#code=function%20copy_array%28arr%29%20%7B%0A%20%20%0A%20%20var%20copy_array_strified%20%3D%20JSON.stringify%28arr%29%3B%0A%20%20%20%20var%20copy%20%3D%20JSON.parse%28copy_array_strified%29%3B//%20write%20this%20using%20JSON.stringify%20%26%20.parse%0A%20%20console.log%28copy%29%3B%0A%20%20console.log%28copy_array_strified%29%3B%0A%7D%0A%0Aconst%20array%20%3D%20%5B'a',%20'b'%5D%3B%0Aconst%20by_copy%20%3D%20copy_array%28array%29%3B%0A%0A/*console.assert%28array%20!%3D%3D%20by_copy%29%3B%0Aconsole.assert%28array%5B1%5D%20%3D%3D%3D%20by_copy%5B1%5D%29%3B*/%0Aconsole.assert%28array%20!%3D%3D%20by_copy%29%3B&cumulative=false&curInstr=8&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
+[on pytut](http://www.pythontutor.com/live.html#code=function%20copy_array%28arr%29%20%7B%0A%20%20%0A%20%20var%20copy_array_strified%20%3D%20JSON.stringify%28arr%29%3B%0A%20%20%20%20var%20copy%20%3D%20JSON.parse%28copy_array_strified%29%3B//%20write%20this%20using%20JSON.stringify%20%26%20.parse%0A%20%20console.log%28copy%29%3B%0A%20%20console.log%28copy_array_strified%29%3B%0A%20%20return%20copy%0A%7D%0A%0Aconst%20array%20%3D%20%5B'a',%20'b'%5D%3B%0Aconst%20by_copy%20%3D%20copy_array%28array%29%3B%0A%0Aconsole.assert%28array%20!%3D%3D%20by_copy%29%3B%0Aconsole.assert%28array%5B1%5D%20%3D%3D%3D%20by_copy%5B1%5D%29%3B%0Aconsole.assert%28array%20!%3D%3D%20by_copy%29%3B&cumulative=false&curInstr=11&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false)
 ```js
-{
-  function copy_array(arr) {
+function copy_array(arr) {
   
   var copy_array_strified = JSON.stringify(arr);
     var copy = JSON.parse(copy_array_strified);// write this using JSON.stringify & .parse
   console.log(copy);
   console.log(copy_array_strified);
+  return copy
 }
 
 const array = ['a', 'b'];
 const by_copy = copy_array(array);
 
-/*console.assert(array !== by_copy);
-console.assert(array[1] === by_copy[1]);*/
 console.assert(array !== by_copy);
-}
+console.assert(array[1] === by_copy[1]);
+console.assert(array !== by_copy);
 ```
 ---
 ---
